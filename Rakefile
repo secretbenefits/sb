@@ -8,3 +8,7 @@ Rake::TestTask.new(:test) do |t|
 end
 
 task :default => :test
+task :test => :compile
+
+require "rake/extensiontask"
+Rake::ExtensionTask.new("sb_ext")
